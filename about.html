@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ECOTIENDA</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <div class="jumbotron p-5 mb-4  rounded-3 ">
+        <h1 class="display-5 fw-bold">LA ECOTIENDA DE MIS SUEÑOS</h1>
+    </div>
+
+    <div class="container mt-4">
+     <span>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
+     </span>
+    </div>
+        <div id="footer"></div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+       fetch("navbar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+
+                // Activar el enlace correcto
+                const currentPage = window.location.pathname.split("/").pop();
+
+                document.querySelectorAll("#navbar a").forEach(link => {
+                    const linkPage = link.getAttribute("href");
+
+                    if (linkPage === currentPage) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+    </script>
+
+</body>
+
+</html>

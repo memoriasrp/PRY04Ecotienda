@@ -10,9 +10,7 @@
 </head>
 
 <body>
-
-    
-<div id="navbar"></div>
+    <div id="navbar"></div>
 
     <div class="jumbotron p-5 mb-4  rounded-3 ">
         <h1 class="display-5 fw-bold">LA ECOTIENDA DE MIS SUEÑOS</h1>
@@ -118,39 +116,35 @@
             </div>
         </div>
     </div>
-    <footer>
-        <div class="row">
-            <div class="col-sm-4 d-flex flex-column">
-                <a href="https://www.facebook.com/" target="_blank">facebook</a>
-                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-                <a href="https://www.google.com/" target="_blank">Google</a>
-            </div>
-            <div class="col-sm-4">
-                <address>
-                    <p>
-                    <h4>Oficina Central</h4>
-                    </p>
-                    <p>Urb. Leon XIII c-9 CAYMA, AREQUIPA, PERU</p>
-                    <p>+51957621515</p>
-                    <p>silviamarp@gmail.com</p>
-                </address>
-            </div>
+    <div id="footer"></div>
 
-            <div class="col-sm-4 d-flex flex-column align-items-end">
-                <a href="https://www.facebook.com/" target="_blank">Nosotros</a>
-                <a href="https://www.instagram.com/" target="_blank">Precios</a>
-                <a href="https://www.google.com/" target="_blank">Sueña con nosotros</a>
-            </div>
-        </div>
-    </footer>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-  fetch("navbar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
-    });
-</script>
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+
+                // Activar el enlace correcto
+                const currentPage = window.location.pathname.split("/").pop();
+
+                document.querySelectorAll("#navbar a").forEach(link => {
+                    const linkPage = link.getAttribute("href");
+
+                    if (linkPage === currentPage) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+
+
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+
+    </script>
 
 </body>
 
