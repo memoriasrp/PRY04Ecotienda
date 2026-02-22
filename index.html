@@ -11,10 +11,8 @@
 
 <body>
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    
+<div id="navbar"></div>
 
     <div class="jumbotron p-5 mb-4  rounded-3 ">
         <h1 class="display-5 fw-bold">LA ECOTIENDA DE MIS SUEÑOS</h1>
@@ -22,15 +20,21 @@
     <div class="container mt-4">
         <div class="d-flex">
             <div class="col-12 col-md-4">
-                <p><h2>Productos</h2></p>
+                <p>
+                <h2>Productos</h2>
+                </p>
             </div>
 
             <div class="col-12 col-md-4">
-                <p><h3>Talleres</h3></p>
+                <p>
+                <h3>Talleres</h3>
+                </p>
             </div>
 
             <div class="col-12 col-md-4">
-                <p><h3>Voluntariado</h3></p>
+                <p>
+                <h3>Voluntariado</h3>
+                </p>
             </div>
         </div>
         <hr>
@@ -39,7 +43,8 @@
             <div class="card-hotel d-flex flex-column">
                 <div>
                     <h4>Papel Reciclado color de colores</h4>
-                    <p>Papel reciclado resistente y ecológico, perfecto para tus proyectos diarios y amigable con el planeta.</p>
+                    <p>Papel reciclado resistente y ecológico, perfecto para tus proyectos diarios y amigable con el
+                        planeta.</p>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva">Acción 1</button>
@@ -48,7 +53,8 @@
             <div class="card-hotel  d-flex flex-column">
                 <div>
                     <h4>Papel reciclado con semillas</h4>
-                    <p>escribe, regala y luego plántalo para ver crecer flores o hierbas. Sostenible y lleno de vida.</p>
+                    <p>escribe, regala y luego plántalo para ver crecer flores o hierbas. Sostenible y lleno de vida.
+                    </p>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva">Acción 1</button>
@@ -57,7 +63,8 @@
             <div class="card-hotel  d-flex flex-column">
                 <div>
                     <h4>Pasta de Papel</h4>
-                    <p>Pasta de papel elaborada con fibras recicladas, ideal para crear piezas ecológicas y reducir el impacto ambiental.</p>
+                    <p>Pasta de papel elaborada con fibras recicladas, ideal para crear piezas ecológicas y reducir el
+                        impacto ambiental.</p>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva">Acción 1</button>
@@ -66,7 +73,8 @@
             <div class="card-hotel  d-flex flex-column">
                 <div>
                     <h4>Bastidores</h4>
-                    <p>Bastidores ecológicos ideales para crear hojas de papel reciclado de forma artesanal, reduciendo residuos y fomentando la reutilización.</p>
+                    <p>Bastidores ecológicos ideales para crear hojas de papel reciclado de forma artesanal, reduciendo
+                        residuos y fomentando la reutilización.</p>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva">Acción 1</button>
@@ -107,7 +115,7 @@
                 <div>
                     <button class="btn btn-primary btn-reserva">Acción 1</button>
                 </div>
-            </div>         
+            </div>
         </div>
     </div>
     <footer>
@@ -135,6 +143,15 @@
             </div>
         </div>
     </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
+
 </body>
 
 </html>

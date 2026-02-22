@@ -1,6 +1,7 @@
 .jumbotron {
     background-color: rgb(2, 150, 58);
     color:rgb(228, 243, 252);
+    margin-top: 50px;
 }
 btn {
 color: aquamarine;
@@ -22,5 +23,5 @@ width: 100%;
  }
  a {
     color: #f3f0ee; /* El color que tú quieras */
-    target: "_blank"
+    
 }
