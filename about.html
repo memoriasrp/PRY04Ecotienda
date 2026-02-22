@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ECOTIENDA</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <div id="head-import"></div>
 </head>
 
 <body>
@@ -36,6 +35,11 @@
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        fetch("head.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("head-import").innerHTML = data;
+            });
         fetch("navbar.html")
             .then(res => res.text())
             .then(data => {
