@@ -25,62 +25,102 @@
                 <li class="breadcrumb-item"><a href="contacto.html">Contacto</a></li>
             </ol>
         </nav>
-        <div class="table-responsive">
-            <table class="table table-hover table-striped">
-            <thead class="table-success">
-                <tr>
-                    <th>Calidad</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Email</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="oi oi-star"></span></td>
-                    <td>Silvia</td>
-                    <td>Pérez</td>
-                    <td>silvia@example.com</td>
-                </tr>
-                <tr>
-                    <td><span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span></td>
-                    <td>Juan</td>
-                    <td>Gómez</td>
-                    <td>juan@example.com</td>
-                </tr>
-                <tr>
-                    <td><span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span></td>
-                    <td>Juan</td>
-                    <td>Gómez</td>
-                    <td>juan@example.com</td>
-                </tr>
-                <tr>
-                    <td><span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span></td>
-                    <td>Juan</td>
-                    <td>Gómez</td>
-                    <td>juan@example.com</td>
-                </tr>
-                <tr>
-                    <td><span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span>
-                        <span class="oi oi-star"></span></td>
-                    <td>Juan</td>
-                    <td>Gómez</td>
-                    <td>juan@example.com</td>
-                </tr>
-            </tbody>
-        </table>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab">
+                    Inicio
+                </button>
+            </li>
 
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab">
+                    Perfil
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="comentarios-tab" data-bs-toggle="tab" data-bs-target="#comentarios"
+                    type="button" role="tab">
+                    Comentarios
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="home" role="tabpanel">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped">
+                        <thead class="table-success">
+                            <tr>
+                                <th>Calidad</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="oi oi-star"></span></td>
+                                <td>Silvia</td>
+                                <td>Pérez</td>
+                                <td>silvia@example.com</td>
+                            </tr>
+                            <tr>
+                                <td><span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                </td>
+                                <td>Juan</td>
+                                <td>Gómez</td>
+                                <td>juan@example.com</td>
+                            </tr>
+                            <tr>
+                                <td><span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                </td>
+                                <td>Juan</td>
+                                <td>Gómez</td>
+                                <td>juan@example.com</td>
+                            </tr>
+                            <tr>
+                                <td><span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                </td>
+                                <td>Juan</td>
+                                <td>Gómez</td>
+                                <td>juan@example.com</td>
+                            </tr>
+                            <tr>
+                                <td><span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                    <span class="oi oi-star"></span>
+                                </td>
+                                <td>Juan</td>
+                                <td>Gómez</td>
+                                <td>juan@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="profile" role="tabpanel">
+                Contenido de Perfil
+            </div>
+            <div class="tab-pane fade" id="comentario" role="tabpanel">
+                Contenido de comentario
+            </div>
         </div>
-        
+
+
+
+
 
     </div>
     <div id="footer"></div>
