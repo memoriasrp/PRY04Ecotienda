@@ -53,3 +53,8 @@ footer {
   height: 100%;
   object-fit: cover; /* recorta sin deformar */
 }
+.breadcrumb {
+  background-color: #f3f8f3; /* verde muy suave */
+  padding: .75rem 1rem;
+  border-radius: .25rem;
+}
