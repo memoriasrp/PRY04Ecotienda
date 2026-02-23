@@ -61,3 +61,12 @@ footer {
 .tab-content{
     padding-top: 10px;
 }
+
+  .accordion-button:not(.collapsed) {
+    background-color: #e6f4ea; /* verde suave */
+    color: #2e7d32;
+  }
+
+  .accordion-button {
+    transition: background-color .3s ease;
+  }
