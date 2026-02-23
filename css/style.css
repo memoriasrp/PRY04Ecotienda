@@ -1,0 +1,82 @@
+@charset "UTF-8";
+body {
+  overflow-x: hidden;
+}
+
+btn {
+  color: aquamarine;
+}
+
+footer {
+  padding: 10px 10px 0 10px;
+  background-color: #108f38;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.jumbotron {
+  background-color: #108f38;
+  color: #e4f3fc;
+}
+
+.card-hotel {
+  flex: 1 200px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hotel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-reserva {
+  width: 100%;
+  border-radius: 0;
+}
+
+.linkFooter {
+  color: #e4f3fc;
+  /* El color que tú quieras */
+}
+
+.footer-icons {
+  padding-right: 10px;
+}
+
+.banner-principal {
+  height: 250px;
+  /* ajusta a tu gusto */
+  overflow: hidden;
+}
+
+.img-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* recorta sin deformar */
+}
+
+.breadcrumb {
+  background-color: #f3f8f3;
+  /* verde muy suave */
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.tab-content {
+  padding-top: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e6f4ea;
+  /* verde suave */
+  color: #108f38;
+}
+
+.accordion-button {
+  transition: background-color 0.3s ease;
+}
+
+/*# sourceMappingURL=style.css.map */
