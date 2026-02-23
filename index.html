@@ -26,7 +26,7 @@
                 <li class="breadcrumb-item"><a href="contacto.html">Contacto</a></li>
             </ol>
         </nav>
-
+        <!-- Cabecera Collapse-->
         <div class="row">
             <div class="col-12 col-md-4">
                 <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#funciona"
@@ -52,6 +52,7 @@
 
             </div>
         </div>
+        <!-- Detalle Collapse-->
         <div class="row">
             <div class="collapse col-12 col-md-4" id="funciona">
                 <div class="card card-body">
@@ -74,6 +75,7 @@
 
         </div>
         <hr>
+        <!-- Carrusel-->
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -106,7 +108,7 @@
 
         </div>
 
-        <!-- Lista separada -->
+        <!-- Lista productos -->
         <div class="d-flex flex-wrap gap-1">
             <div class="card card-hotel d-flex flex-column ms-2 ">
                 <img src="images/papel.avif" class="card-img-top" alt="papel img">
@@ -120,7 +122,8 @@
                     <p class="card-text">Papel reciclado resistente y ecológico, perfecto para tus proyectos diarios y
                         amigable con el
                         planeta.</p>
-                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso"
+                        id="guiaUsoPrd01Btn">Solicitar
                         guia</button>
                 </div>
                 <div>
@@ -135,7 +138,8 @@
                     <p class="card-text">escribe, regala y luego plántalo para ver crecer flores o hierbas. Sostenible y
                         lleno de vida.
                     </p>
-                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso"
+                        id="guiaUsoPrd02Btn">Solicitar
                         guia</button>
                 </div>
                 <div>
@@ -150,7 +154,8 @@
                     <p class="card-text">Pasta de papel elaborada con fibras recicladas, ideal para crear piezas
                         ecológicas y reducir el
                         impacto ambiental.</p>
-                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso"
+                        id="guiaUsoPrd03Btn">Solicitar
                         guia</button>
                 </div>
                 <div>
@@ -165,7 +170,8 @@
                     <p class="card-text">Bastidores ecológicos ideales para crear hojas de papel reciclado de forma
                         artesanal, reduciendo
                         residuos y fomentando la reutilización.</p>
-                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso"
+                        id="guiaUsoPrd04Btn">Solicitar
                         guia</button>
                 </div>
                 <div>
@@ -178,7 +184,8 @@
                     <h5 class="card-title">Etiquetas personalizadas para regalos o productos</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
                     <p class="card-text">Descripción breve del primer ítem, explicando su contenido o función.</p>
-                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso"
+                        id="guiaUsoPrd05Btn">Solicitar
                         guia</button>
                 </div>
                 <div>
@@ -193,7 +200,8 @@
                     <h5 class="card-title">Kits de siembra</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
                     <p class="card-text">maceta + tierra + papel con semillas.</p>
-                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso"
+                        id="guiaUsoPrd06Btn">Solicitar
                         guia</button>
                 </div>
                 <div>
@@ -293,6 +301,27 @@
             ride: 'carousel'
         });
 
+        const modal = document.getElementById('guiaUso');
+        let btnAbierto = null;
+        modal.addEventListener('show.bs.modal', function (e) {
+            btnAbierto = e.relatedTarget.id;
+            const btn = document.getElementById(btnAbierto);
+
+            btn.classList.remove('btn-outline-success');
+            btn.classList.add('btn-primary');
+            btn.disabled = true;
+
+        });
+        modal.addEventListener('shown.bs.modal', function (e) {
+            console.log("El modal termino de cargar");
+
+        });
+        modal.addEventListener('hidden.bs.modal', function (e) {
+            const btn = document.getElementById(btnAbierto);
+            btn.classList.remove('btn-primary');
+            btn.classList.add('btn-outline-success');
+            btn.disabled = false;
+        });
 
     </script>
 
