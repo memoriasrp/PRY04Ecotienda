@@ -80,9 +80,10 @@
                 <img src="images/papel.avif" class="card-img-top" alt="papel img">
                 <div class="card-body">
 
-                    <h5 class="card-title">Papel Reciclado color de colores</h5>
+                    <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="right"
+                        title="Hecho con materiales reciclados">
+                        Papel Reciclado color de colores</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
-
 
                     <p class="card-text">Papel reciclado resistente y ecológico, perfecto para tus proyectos diarios y
                         amigable con el
@@ -102,6 +103,8 @@
                     <p class="card-text">escribe, regala y luego plántalo para ver crecer flores o hierbas. Sostenible y
                         lleno de vida.
                     </p>
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                        guia</button>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva">Reservar</button>
@@ -115,6 +118,8 @@
                     <p class="card-text">Pasta de papel elaborada con fibras recicladas, ideal para crear piezas
                         ecológicas y reducir el
                         impacto ambiental.</p>
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                        guia</button>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva">Reservar</button>
@@ -128,6 +133,8 @@
                     <p class="card-text">Bastidores ecológicos ideales para crear hojas de papel reciclado de forma
                         artesanal, reduciendo
                         residuos y fomentando la reutilización.</p>
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                        guia</button>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva">Reservar</button>
@@ -136,12 +143,16 @@
             <div class="card card-hotel d-flex flex-column ms-2">
                 <img src="images/etiquetas.jpg" class="card-img-top" alt="papel img">
                 <div class="card-body">
-                    <h5 class="card-title">Etiquetas para regalos o productos</h5>
+                    <h5 class="card-title">Etiquetas personalizadas para regalos o productos</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
                     <p class="card-text">Descripción breve del primer ítem, explicando su contenido o función.</p>
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                        guia</button>
                 </div>
                 <div>
-                    <button class="btn btn-primary btn-reserva">Reservar</button>
+                    <button class="btn btn-primary btn-reserva" data-bs-toggle="popover" data-bs-placement="right"
+                        title="Personalizacion"
+                        data-bs-content="Enviar un comentario sobre como lo deseas y previo al pedido nos comunicamos personalmente para dar conformidad al diseño.">Reservar</button>
                 </div>
             </div>
             <div class="card card-hotel d-flex flex-column ms-2">
@@ -150,6 +161,8 @@
                     <h5 class="card-title">Kits de siembra</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
                     <p class="card-text">maceta + tierra + papel con semillas.</p>
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                        guia</button>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva">Reservar</button>
@@ -235,6 +248,12 @@
             .then(data => {
                 document.getElementById("footer").innerHTML = data;
             });
+
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el))
+
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el))
 
     </script>
 
