@@ -87,6 +87,8 @@
                     <p class="card-text">Papel reciclado resistente y ecológico, perfecto para tus proyectos diarios y
                         amigable con el
                         planeta.</p>
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#guiaUso">Solicitar
+                        guia</button>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva mr-auto">Reservar</button>
@@ -155,6 +157,51 @@
             </div>
 
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="guiaUso" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="miModalLabel">Guia de uso de producto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        Podemos enviarte varios ejemplos de proyectos que puedes realizar(asi como los demas elementos
+                        necesarios para realizarlos) con este articulo asi como usos finales de estos.
+                        Dejamos tus datos y te enviaremos toda la informacion necesaria.
+
+                        <form>
+
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Correo</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="acepto">
+                                <label class="form-check-label" for="acepto">
+                                    Deseo recibir informacion de promociones y cursos.
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-success">Enviar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
     <div id="footer"></div>
 
