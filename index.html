@@ -5,13 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ECOTIENDA</title>
-    <div id="head-import"></div>
 </head>
 
 <body>
     <div id="navbar"></div>
     <div class="banner-principal">
-        <img src="images/banner.jpg" class=" img-banner" alt="Banner principal">
+        <img src="/src/images/banner.jpg" class=" img-banner" alt="Banner principal">
     </div>
     <div class="jumbotron p-5 mb-4  rounded-3 ">
         <h1 class="display-5 fw-bold">LA ECOTIENDA DE MIS SUEÑOS</h1>
@@ -21,9 +20,9 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">Home</li>
                 <li class="breadcrumb-item"><a href="about.html">Nosotros</a></li>
-                <li class="breadcrumb-item"><a href="precios.html">Precios</a></li>
+                <li class="breadcrumb-item"><a href="/precios.html">Precios</a></li>
                 <li class="breadcrumb-item"><a href="#">Terminos y Condicione</a></li>
-                <li class="breadcrumb-item"><a href="contacto.html">Contacto</a></li>
+                <li class="breadcrumb-item"><a href="/contacto.html">Contacto</a></li>
             </ol>
         </nav>
         <!-- Cabecera Collapse-->
@@ -79,18 +78,18 @@
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/banner/productos.jpg" class="d-block w-100" alt="...">
+                    <img src="/src/images/banner/productos.jpg" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="images/banner/banner_02.png" class="d-block w-100" alt="...">
+                    <img src="/src/images/banner/banner_02.png" class="d-block w-100" alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="images/banner/banner_03.png" class="d-block w-100" alt="...">
+                    <img src="/src/images/banner/banner_03.png" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/banner/banner_04.png" class="d-block w-100" alt="...">
+                    <img src="/src/images/banner/banner_04.png" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -111,7 +110,7 @@
         <!-- Lista productos -->
         <div class="d-flex flex-wrap gap-1">
             <div class="card card-hotel d-flex flex-column ms-2 ">
-                <img src="images/papel.avif" class="card-img-top" alt="papel img">
+                <img src="/src/images/productos/papel.avif" class="card-img-top" alt="papel img">
                 <div class="card-body">
 
                     <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="right"
@@ -131,7 +130,7 @@
                 </div>
             </div>
             <div class="card card-hotel d-flex flex-column ms-2">
-                <img src="images/papel_semilla.jpg" class="card-img-top" alt="papel img">
+                <img src="/src/images/productos/papel_semilla.jpg" class="card-img-top" alt="papel img">
                 <div class="card-body">
                     <h5 class="card-title">Papel reciclado con semillas</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
@@ -147,7 +146,7 @@
                 </div>
             </div>
             <div class="card card-hotel d-flex flex-column ms-2">
-                <img src="images/pasta de papel.jpg" class="card-img-top" alt="papel img">
+                <img src="/src/images/productos/pasta de papel.jpg" class="card-img-top" alt="papel img">
                 <div class="card-body">
                     <h5 class="card-title">Pasta de Papel</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
@@ -163,7 +162,7 @@
                 </div>
             </div>
             <div class="card card-hotel d-flex flex-column ms-2">
-                <img src="images/bastidor.jpg" class="card-img-top" alt="papel img">
+                <img src="/src/images/productos/bastidor.jpg" class="card-img-top" alt="papel img">
                 <div class="card-body">
                     <h5 class="card-title">Bastidores</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
@@ -179,7 +178,7 @@
                 </div>
             </div>
             <div class="card card-hotel d-flex flex-column ms-2">
-                <img src="images/etiquetas.jpg" class="card-img-top" alt="papel img">
+                <img src="/src/images/productos/etiquetas.jpg" class="card-img-top" alt="papel img">
                 <div class="card-body">
                     <h5 class="card-title">Etiquetas personalizadas para regalos o productos</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
@@ -195,7 +194,7 @@
                 </div>
             </div>
             <div class="card card-hotel d-flex flex-column ms-2">
-                <img src="images/Kit-de-Siembra-Codelco.webp" class="card-img-top" alt="papel img">
+                <img src="/src/images/productos/Kit-de-Siembra-Codelco.webp" class="card-img-top" alt="papel img">
                 <div class="card-body">
                     <h5 class="card-title">Kits de siembra</h5>
                     <h6 class="card-subtitle text-muted">Tarjetas</h6>
@@ -257,73 +256,7 @@
 
     </div>
     <div id="footer"></div>
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        fetch("head.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("head-import").innerHTML = data;
-            });
-        fetch("navbar.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("navbar").innerHTML = data;
-
-                // Activar el enlace correcto
-                const currentPage = window.location.pathname.split("/").pop();
-
-                document.querySelectorAll("#navbar a").forEach(link => {
-                    const linkPage = link.getAttribute("href");
-
-                    if (linkPage === currentPage) {
-                        link.classList.add("active");
-                    }
-                });
-            });
-
-
-        fetch("footer.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el))
-
-        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-        const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el))
-
-        const myCarousel = document.querySelector('#carouselExample');
-        const carousel = new bootstrap.Carousel(myCarousel, {
-            interval: 3000, // 3 segundos
-            ride: 'carousel'
-        });
-
-        const modal = document.getElementById('guiaUso');
-        let btnAbierto = null;
-        modal.addEventListener('show.bs.modal', function (e) {
-            btnAbierto = e.relatedTarget.id;
-            const btn = document.getElementById(btnAbierto);
-
-            btn.classList.remove('btn-outline-success');
-            btn.classList.add('btn-primary');
-            btn.disabled = true;
-
-        });
-        modal.addEventListener('shown.bs.modal', function (e) {
-            console.log("El modal termino de cargar");
-
-        });
-        modal.addEventListener('hidden.bs.modal', function (e) {
-            const btn = document.getElementById(btnAbierto);
-            btn.classList.remove('btn-primary');
-            btn.classList.add('btn-outline-success');
-            btn.disabled = false;
-        });
-
-    </script>
+    <script type="module" src="/src/js/main.js"></script>
 
 </body>
 

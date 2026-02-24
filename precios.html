@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ECOTIENDA</title>
-    <div id="head-import"></div>
 </head>
 
 <body>
@@ -18,11 +17,11 @@
     <div class="container mt-4">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="about.html">Nosotros</a></li>
+                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/about.html">Nosotros</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Precios</li>
                 <li class="breadcrumb-item"><a href="#">Terminos y Condicione</a></li>
-                <li class="breadcrumb-item"><a href="contacto.html">Contacto</a></li>
+                <li class="breadcrumb-item"><a href="/contacto.html">Contacto</a></li>
             </ol>
         </nav>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -115,15 +114,16 @@
                 <div class="accordion" id="accordionEco">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingZero">
-                            <button class="accordion-button" data-bs-toggle="collapse" 
-                            data-bs-target="#ecoA" aria-expanded="false" aria-controls="ecoA">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#ecoA"
+                                aria-expanded="false" aria-controls="ecoA">
                                 Perfil Premium
                             </button>
                         </h2>
                         <div id="ecoA" class="accordion-collapse collapse" aria-labelledby="headingZero"
-                        data-bs-parent="#accordionEco">
+                            data-bs-parent="#accordionEco">
                             <div class="accordion-body">
-                                Acceso a todos los curso, descuentos especiales en todos los productos y envio gratis dentro de la region.
+                                Acceso a todos los curso, descuentos especiales en todos los productos y envio gratis
+                                dentro de la region.
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,8 @@
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                             data-bs-parent="#accordionEco">
                             <div class="accordion-body">
-                                Acceso al curso inscrito, descuentos especiales en los productos referentes al curso y primer envio gratis dentro de la region.
+                                Acceso al curso inscrito, descuentos especiales en los productos referentes al curso y
+                                primer envio gratis dentro de la region.
                             </div>
                         </div>
                     </div>
@@ -152,7 +153,8 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionEco">
                             <div class="accordion-body">
-                                 descuento del 10% en la primera compra y envio gratis dentro de la region por compras mayores a 100 soles.
+                                descuento del 10% en la primera compra y envio gratis dentro de la region por compras
+                                mayores a 100 soles.
                             </div>
                         </div>
                     </div>
@@ -171,39 +173,7 @@
 
     </div>
     <div id="footer"></div>
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        fetch("head.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("head-import").innerHTML = data;
-            });
-        fetch("navbar.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("navbar").innerHTML = data;
-
-                // Activar el enlace correcto
-                const currentPage = window.location.pathname.split("/").pop();
-
-                document.querySelectorAll("#navbar a").forEach(link => {
-                    const linkPage = link.getAttribute("href");
-
-                    if (linkPage === currentPage) {
-                        link.classList.add("active");
-                    }
-                });
-            });
-
-        fetch("footer.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            });
-
-    </script>
-
+    <script type="module" src="/src/js/main.js"></script>
 </body>
 
 </html>
