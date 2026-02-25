@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById('guiaUso');
     if (modal) {
         let btnAbierto = null;
-
         modal.addEventListener('show.bs.modal', function (e) {
             btnAbierto = e.relatedTarget.id;
             const btn = document.getElementById(btnAbierto);
@@ -55,13 +54,22 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.classList.remove('btn-outline-success');
             btn.classList.add('btn-primary');
             btn.disabled = true;
+            console.log("Antes de que el modal empiece a mostrarse");
         });
+        modal.addEventListener('shown.bs.modal', function (e) {
+            console.log("Cuando el modal ya terminó de mostrarse ");
+        });
+        modal.addEventListener('hide.bs.modal', function (e) {
+            console.log("Antes de que el modal empiece a ocultarse");
+        });
+
 
         modal.addEventListener('hidden.bs.modal', function () {
             const btn = document.getElementById(btnAbierto);
             btn.classList.remove('btn-primary');
             btn.classList.add('btn-outline-success');
             btn.disabled = false;
+            console.log("Cuando el modal ya terminó de ocultarse");
         });
     }
 
